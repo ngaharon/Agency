@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.2] relative overflow-hidden">
+    <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.2] relative overflow-hidden">
       <Navbar />
       <Spotlight
       className="hidden md:flex left-80"
@@ -28,7 +28,6 @@ export default function Home() {
         justify-center
         border rounded-full w-48 p-2
         mx-auto my-6
-        animate-shimmer
         text-white"
         >
          Book a call
