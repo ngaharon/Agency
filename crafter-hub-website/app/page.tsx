@@ -5,6 +5,7 @@ import Link from "next/link";
 import WebsiteDesign from "./website-design";
 import GraphicDesign from "./graphic-design";
 import WordPressStores from "./snippets/wordpress-stores";
+import Brands from "./brands";
 
 
 export default function Home() {
@@ -43,6 +44,7 @@ export default function Home() {
           <WebsiteDesign />
           <GraphicDesign />
           <WordPressStores />
+          <Brands />
           
 
         </div>
