@@ -4,6 +4,8 @@ import { Spotlight } from "@/components/ui/spotlight";
 import Link from "next/link";
 import WebsiteDesign from "./website-design";
 import GraphicDesign from "./graphic-design";
+import WordPressStores from "./snippets/wordpress-stores";
+
 
 export default function Home() {
   return (
@@ -40,6 +42,8 @@ export default function Home() {
           <SliderOne />
           <WebsiteDesign />
           <GraphicDesign />
+          <WordPressStores />
+          
 
         </div>
 
