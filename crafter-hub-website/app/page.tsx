@@ -7,6 +7,7 @@ import GraphicDesign from "./graphic-design";
 import WordPressStores from "./snippets/wordpress-stores";
 import Brands from "./brands";
 import Services from "./services";
+import FAQS from "./faqs";
 
 
 export default function Home() {
@@ -47,6 +48,7 @@ export default function Home() {
           <WordPressStores />
           <Brands />
           <Services />
+          <FAQS />
           
 
         </div>
