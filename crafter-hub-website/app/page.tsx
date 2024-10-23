@@ -1,3 +1,5 @@
+'use client'
+
 import Navbar from "@/components/navbar";
 import SliderOne from "@/components/ui/slider";
 import { Spotlight } from "@/components/ui/spotlight";
@@ -8,12 +10,43 @@ import WordPressStores from "./snippets/wordpress-stores";
 import Brands from "./brands";
 import Services from "./services";
 import FAQS from "./faqs";
+import { useRef } from "react";
 
 
 export default function Home() {
+
+  const WebsiteDesignRef = useRef<HTMLDivElement>(null);
+  const GraphicDesignRef = useRef<HTMLDivElement>(null);
+  const WordPressStoresRef = useRef<HTMLDivElement>(null);
+  const BrandsRef = useRef<HTMLDivElement>(null);
+
+  const scrollToWebsiteDesign = () => {
+    WebsiteDesignRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const scrollToGraphicDesign = () => {
+    GraphicDesignRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const scrollToWordPressStores = () => {
+    WordPressStoresRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const scrollToBrands = () => {
+    BrandsRef.current?.scrollIntoView({ behavior: "smooth"})
+  }
+
+
+
   return (
     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.2] relative overflow-hidden">
-      <Navbar />
+      <Navbar
+       scrollToWebsiteDesign={scrollToWebsiteDesign}
+       scrollToGraphicDesign={scrollToGraphicDesign}
+       scrollTowordPressStores={scrollToWordPressStores}
+       scrollToBrands={scrollToBrands}
+      
+      />
       <Spotlight
       className="hidden md:flex left-80"
       fill="blue"
@@ -43,10 +76,23 @@ export default function Home() {
 
         <div className="w-full pt-20">
           <SliderOne />
+
+          <div ref={WebsiteDesignRef}>
           <WebsiteDesign />
+          </div>
+
+          <div ref={GraphicDesignRef}>
           <GraphicDesign />
+          </div>
+
+          <div ref={WordPressStoresRef}>
           <WordPressStores />
+          </div>
+
+          <div ref={BrandsRef}>
           <Brands />
+          </div>
+          
           <Services />
           <FAQS />
           
